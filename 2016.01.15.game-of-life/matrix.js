@@ -29,6 +29,12 @@ var gameOfLife = gameOfLife || {};
        return self.matrix[targetY][targetX];  
     }; 
     
+    Matrix.prototype.createLife = function (newLife) {
+       var self = this; 
+       
+       self.matrix[newLife.y][newLife.x] = newLife; 
+    }; 
+    
 })(gameOfLife);
 
 module.exports = {

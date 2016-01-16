@@ -3,6 +3,7 @@
 
     var assert = require('assert');
     var matrixModule = require('../matrix');
+    var lifeModule = require('../life');
 
     describe('In the Game of Life,', function () {
         describe('A Matrix', function () {
@@ -50,6 +51,25 @@
                 matrix.createBoard();
 
                 assert.equal(matrix.getLife(2, 2), undefined);
+            });
+            
+            it('should have the ability to create life at x, y location in the board', function () {
+                var matrix = new matrixModule.Matrix(); 
+                var expectedLife = new lifeModule.Life();
+                var expectedX = 1; 
+                var expectedY = 2; 
+                
+                matrix.maxWidth = 3;
+                matrix.maxHeight = 3;
+                matrix.createBoard();
+                                  
+                expectedLife.x = expectedX; 
+                expectedLife.y = expectedY; 
+                expectedLife.isAlive = true; 
+                
+                matrix.createLife(expectedLife);
+                 
+                assert(matrix.getLife(expectedX, expectedY), expectedLife); 
             });
         });
     });
