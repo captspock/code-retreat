@@ -19,12 +19,6 @@ var gameOfLife = gameOfLife || {};
             self.matrix[y] = new Array(self.maxWidth); 
         }
                         
-        for (y = 0; y < self.maxHeight; y += 1) {
-            for (x = 0; x < self.maxWidth; x += 1) {
-                self.matrix[y][x] = 0
-            } 
-        }
-        
         return self.matrix;   
     };
     

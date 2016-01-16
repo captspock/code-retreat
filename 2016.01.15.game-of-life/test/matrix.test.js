@@ -24,7 +24,7 @@
             
             it('shall have ability to create a matrix (board) with width X height cells', function () {
                 var matrix = new matrixModule.Matrix(); 
-                var expectedMatrix = [[0, 0], [0, 0], [0, 0], [0,0]]; 
+                var expectedMatrix = [[,], [,], [,], [,]]; 
                 
                 matrix.maxWidth = 2; 
                 matrix.maxHeight = 4; 
