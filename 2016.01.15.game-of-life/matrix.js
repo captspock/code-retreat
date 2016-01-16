@@ -12,7 +12,7 @@ var gameOfLife = gameOfLife || {};
         this.matrix = new Array(new Array()); 
     }    
     
-    Matrix.prototype.create = function () {
+    Matrix.prototype.createBoard = function () {
         var self = this; 
         var x, y; 
         

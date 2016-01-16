@@ -31,14 +31,14 @@
                 assert.equal(matrix.maxHeight, expectedMaximumHeight);
             });
 
-            it('shall have ability to create a matrix (board) with width X height cells', function () {
+            it('shall have ability to create a board with width X height cells', function () {
                 var matrix = new matrixModule.Matrix();
                 var expectedMatrix = [[, ], [, ], [, ], [, ]];
 
                 matrix.maxWidth = 2;
                 matrix.maxHeight = 4;
 
-                assert.deepEqual(matrix.create(), expectedMatrix);
+                assert.deepEqual(matrix.createBoard(), expectedMatrix);
             });
 
             it('should have the ability to get a life via x and y coordinates', function () {
@@ -47,7 +47,7 @@
                 matrix.maxWidth = 3;
                 matrix.maxHeight = 3;
 
-                matrix.create();
+                matrix.createBoard();
 
                 assert.equal(matrix.getLife(2, 2), undefined);
             });
