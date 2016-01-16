@@ -23,6 +23,16 @@
 
                 assert.equal(life.y, expectedYCoordinate);
             });
+            
+            it('shall have an indicator if it\'s alive or dead', function () {
+                var expectedIsAlive = true; 
+                var life = new lifeModule.Life();
+
+                life.isAlive = expectedIsAlive;
+
+                assert.equal(life.isAlive, expectedIsAlive);
+                
+            }); 
         });
     });
 })();
