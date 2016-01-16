@@ -6,6 +6,7 @@ var gameOfLife = gameOfLife || {};
     nameSpace.Matrix = Matrix; 
     
     function Matrix() {
+        this.author = 'god'; 
         this.maxWidth = 0;
         this.maxHeight = 0;
         this.matrix = new Array(new Array()); 

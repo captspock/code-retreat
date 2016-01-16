@@ -6,6 +6,15 @@
 
     describe('In the Game of Life,', function () {
         describe('A Matrix', function () {
+            it('shall have an author', function () {
+                var expectedAuthor = 'Ray Joseph De Castro'; 
+                
+                var matrix = new matrixModule.Matrix(); 
+                matrix.author = expectedAuthor; 
+                
+                assert.equal(matrix.author, expectedAuthor);
+            }); 
+            
             it('shall have a maximum width', function () {
                 var expectedMaximumWidth = 100;
                 var matrix = new matrixModule.Matrix();
